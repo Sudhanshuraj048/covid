@@ -241,10 +241,10 @@ h1, h2, h3, h4, h5, h6 {
     } */
     #intro .btn-get-record{
         margin-top: 2px;
+        margin-bottom: 120px;
     }
     #intro .intro-img{
-        text-align: center;
-        
+        text-align: center; 
     }
     #intro .intro-img img{
         width: 80%;
