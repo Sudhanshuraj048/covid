@@ -10,6 +10,7 @@ h1, h2, h3, h4, h5, h6 {
 # Back to top button
 --------------------------------------------------------------*/
 
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -84,7 +85,7 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     position: relative;
     color: black;
-    padding: 8px 0 12px 75px;
+    padding: 8px 0 12px 50px;
     transition: 0.3s;
     font-size: 14px;
     font-family: "Open Sans", sans-serif;
@@ -175,7 +176,7 @@ h1, h2, h3, h4, h5, h6 {
 #intro{
     width: 100%;
     height: 70vh;
-    margin-top: 70px;
+  margin-top: 70px;
 }
 #intro h1{
     margin: 0 0 10px 0;
@@ -184,11 +185,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 56px;
     color: black;
 }
-#hero h2{
-    color: #484848;
-    margin-bottom: 50px;
-    font-size: 24px;
-}
+
 #intro .btn-get-record{
    font-family: "Raleway", sans-serif;
    font-weight: 500;
@@ -306,7 +303,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 section{
     padding: 60px 0;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .section-bg{
@@ -373,10 +370,10 @@ section{
 
 .table{
     border-collapse: collapse;
-    margin: 25px 0;
+    margin: 12px 0;
     font-size: .9rem;
     min-width: 700px;
-    border-radius: 5px 5px 0 0;
+    border-radius: 8px 8px 4px 4px;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     /* isolation: isolate; */
@@ -431,4 +428,61 @@ section{
         min-width: 375px;
         
     }
+}
+/*--------------------------------------------------------------
+# Symptoms
+--------------------------------------------------------------*/
+.symptoms{
+    padding-top: 0;
+}
+.symptoms h4{
+    color: #009970;
+    padding-left: 12px;
+    
+}
+.symptoms .content{
+    padding: 30px;
+    margin: 20px;
+}
+.symptoms .content p{
+    margin-top: 4px;
+    margin-bottom: 4px;
+    text-align: center;
+}
+.symptoms .content .sym-box{
+    padding: 20px 0;
+    width: 100%;
+}
+.symptoms .content .sym-box img{
+    width: 100px;
+}
+
+/*--------------------------------------------------------------
+# Symptoms
+--------------------------------------------------------------*/
+.prevention .icon-box{
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 0 10px 0;
+    background: #fff;
+    box-shadow: 0 0 29px 0 rgba(68,88,144,0.30);
+    transition: all 0.3s ease-in-out;
+    border-radius: 15px;
+    text-align: center;
+    border-bottom: 3px solid #fff;
+}
+
+.prevention .icon-box:hover{
+    transform: translateY(-10px);
+    border-color: #009970;
+}
+
+.prevention .icon img{
+    margin-bottom: 15px;
+    width: 300px;
+    height: 100px;
+}
+.prevention .title {
+    color: #009970;
 }
