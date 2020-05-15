@@ -233,7 +233,8 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 892px)
 {
     #intro{
-        height: 140vh;
+        margin-top: 90px;
+        height: 170vh;
     }
     /* #intro .animated{
         -webkit-animation: none;
@@ -253,12 +254,14 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width :768px)
 {
+    
+    #intro{
+        
+        height: 150vh;
+    }
     #intro .btn-get-record{
         margin-top: 2px;
-    }
-    #intro{
-        margin-top: 20px;
-        height: 80vh;
+        /* margin-bottom: 150px; */
     }
     #intro h1{
         font-size: 28px;
@@ -271,14 +274,18 @@ h1, h2, h3, h4, h5, h6 {
         margin-bottom: 30px;
     }
     #intro .intro-img img{
-        width: 80%;
+        width: 50%;
     }
 }
 @media (max-width: 575px) {
+    #intro{
+        
+        height: 70vh;
+    }
     #intro .intro-img img {
       width: 80%;
     }
-  }
+} 
 
   @-webkit-keyframes up-down {
     0% {
