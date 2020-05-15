@@ -1,0 +1,434 @@
+body {
+    font-family: "Open Sans", sans-serif;
+  }
+
+  
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway", sans-serif;
+  }
+  /*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+    height: 80px;
+    z-index: 997;
+    transition: all 0.5s;
+  }
+  
+  #header.header-scrolled {
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    height: 60px;
+    background: #fff;
+  }
+  
+  #header .logo h1 {
+    font-size: 32px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  
+  #header .logo img {
+    padding: 0;
+    margin: 0;
+    max-height: 40px;
+  }
+  
+  .covid{
+    color: #009970;
+}  
+.corona img{
+    
+    animation: go 3s linear infinite;
+}
+@keyframes go
+{
+    0% {transform: rotate(0);}
+    100% {transform: rotate(360deg);}
+}
+
+  @media (max-width: 768px) {
+    #header {
+      box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+      height: 60px;
+      background: #fff;
+    }
+    #header .logo h1 {
+      font-size: 28px;
+    }
+  }
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Desktop Navigation */
+.nav-menu,.nav-menu *{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-menu >ul >li{
+    position: relative;
+    white-space: nowrap;
+    float: left;
+}
+
+.nav-menu a{
+    display: block;
+    position: relative;
+    color: black;
+    padding: 8px 0 12px 75px;
+    transition: 0.3s;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.nav-menu a:hover, .nav-menu .active >a, .nav-menu li:hover > a{
+    color: #009970;
+    text-decoration: none;
+}
+
+/* Mobile Navigation */
+.mobile-nav-toggle{
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    z-index: 9998;
+    border: 0;
+    background: none;
+    font-size: 24px;
+    transition: all 0.4s;
+    outline: none !important;
+    line-height: 1;
+    cursor: pointer;
+    text-align: right;
+}
+.mobile-nav-toggle i{
+    color: #222222;
+}
+.mobile-nav{
+    position: fixed;
+    top: 55px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    z-index: 9999;
+    overflow-y: auto;
+    background: #fff;
+    transition: ease-in-out 0.2s;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+.mobile-nav *{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.mobile-nav a{
+    display: block;
+    position: relative;
+    color: black;
+    padding: 10px 20px;
+    font-weight: 500;
+    outline: none;
+}
+.mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a{
+    color: #009970;
+    text-decoration: none;
+}
+
+.mobile-nav-overly{
+    width: 100%;
+    height: 100%;
+    z-index: 9997;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: rgba(9,9,9,0.6);
+    overflow: hidden;
+    display: none;
+    transition: ease-in-out 0.2s;
+}
+.mobile-nav-active{
+    overflow: hidden;
+}
+.mobile-nav-active .mobile-nav{
+    opacity: 1;
+    visibility: visible;
+}
+.mobile-nav-active .mobile-nav-toggle i{
+    color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Intro Section
+--------------------------------------------------------------*/
+#intro{
+    width: 100%;
+    height: 70vh;
+    margin-top: 70px;
+}
+#intro h1{
+    margin: 0 0 10px 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: black;
+}
+#hero h2{
+    color: #484848;
+    margin-bottom: 50px;
+    font-size: 24px;
+}
+#intro .btn-get-record{
+   font-family: "Raleway", sans-serif;
+   font-weight: 500;
+   font-size: 16px;
+   letter-spacing: 1px;
+   display: inline-block;
+   padding: 10px 30px;
+   margin-top: 50px;
+   border-radius: 50px;
+   transition: 0.5s;
+   color: #009970;
+   border: 2px solid #009970;
+}
+#intro .btn-get-record:hover{
+    background: #009970;
+    color: #fff;
+    text-decoration: none;
+}
+
+#intro .animated{
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+@media (min-width: 1024px)
+{
+    #intro{
+        background-attachment: fixed;
+    }
+}
+@media (max-width: 991px)
+{
+    #intro{
+        height: 100vh;
+    }
+    /* #intro .animated{
+        -webkit-animation: none;
+        animation: none;
+    } */
+    #intro .intro-img{
+        text-align: center;
+    }
+    #intro .intro-img img{
+        width: 80%;
+    }
+}
+@media (max-width: 816px)
+{
+    #intro{
+        height: 140vh;
+    }
+    /* #intro .animated{
+        -webkit-animation: none;
+        animation: none;
+    } */
+    #intro .btn-get-record{
+        margin-top: 2px;
+    }
+    #intro .intro-img{
+        text-align: center;
+        
+    }
+    #intro .intro-img img{
+        width: 80%;
+    }
+}
+
+@media (max-width :768px)
+{
+    #intro .btn-get-record{
+        margin-top: 2px;
+    }
+    #intro{
+        margin-top: 20px;
+        height: 80vh;
+    }
+    #intro h1{
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    #intro h2{
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+    #intro .intro-img img{
+        width: 80%;
+    }
+}
+@media (max-width: 575px) {
+    #intro .intro-img img {
+      width: 80%;
+    }
+  }
+
+  @-webkit-keyframes up-down {
+    0% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes up-down {
+    0% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /*--------------------------------------------------------------
+# Sections for all parts
+--------------------------------------------------------------*/
+section{
+    padding: 60px 0;
+    /* overflow: hidden; */
+}
+
+.section-bg{
+    background-color: #f7fbfe;
+}
+.section-title{
+    text-align: center;
+    padding-bottom: 30px;
+}
+.section-title h2{
+    font-size: 32px;
+    font-weight: bold;
+    position: relative;
+    color: #222222;
+}
+
+.section-title h2:before, .section-title h2:after{
+    content: '';
+    width: 50px;
+    height: 2px;
+    background: #009970;
+    display: inline-block;
+}
+.section-title h2:before{
+    margin: 0 15px 10px 0;
+}
+.section-title h2:after{
+    margin: 0 0 10px 15px;
+}
+/*--------------------------------------------------------------
+# About Us
+--------------------------------------------------------------*/
+.about .row h4{
+    color: #009970;
+}
+.about .row ul{
+    list-style: none;
+    padding: 0;
+}
+.about .row ul li{
+    padding-left: 28px;
+    position: relative;
+}
+
+  .about .row ul i {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 20px;
+    color: #009970;
+    line-height: 1;
+  }
+/*--------------------------------------------------------------
+# Cases
+--------------------------------------------------------------*/
+@media (max-width: 575px) {
+    #alltotal h7 {
+      font-size: 12px;
+    }
+  }
+/*--------------------------------------------------------------
+# Table
+--------------------------------------------------------------*/  
+
+.table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: .9rem;
+    min-width: 700px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    /* isolation: isolate; */
+}
+.thead{
+    color: #fff;
+    line-height: 1.4;
+    background-color: #009970;
+}
+.tbody tr:nth-child(even) {
+    background-color: #eaf8e6;
+  }
+.tbody .tr {
+    border-bottom: 1px solid #dddddd;
+  } 
+ 
+  .tbody tr:last-of-type{
+    border-bottom: 2px solid #009970;
+  }   
+  #search-input{
+    border: .4px  #009970;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: .9rem;
+    min-width: 700px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+.delrec
+{
+    font-size: 12px;
+    padding-right: 2px;
+}
+.deldeath
+{
+    font-size: 12px;
+    padding-right: 2px;
+}
+.delconf
+{
+    font-size: 12px;
+    padding-right: 2px;
+}
+@media(max-width:575px)
+{
+    .table, .delrec, .deldeath, .delconf{
+        font-size: 10px;
+        min-width: 375px;
+        
+    }
+    #search-input{
+        min-width: 375px;
+        
+    }
+}
