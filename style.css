@@ -274,7 +274,7 @@ h1, h2, h3, h4, h5, h6 {
         margin-bottom: 30px;
     }
     #intro .intro-img img{
-        width: 50%;
+        width: 80%;
     }
 }
 @media (max-width: 575px) {
@@ -423,6 +423,18 @@ section{
 {
     font-size: 12px;
     padding-right: 2px;
+}
+@media(max-width:768px)
+{
+    .table, .delrec, .deldeath, .delconf{
+        font-size: 10px;
+        min-width: 575px;
+        
+    }
+    #search-input{
+        min-width: 575px;
+        
+    }
 }
 @media(max-width:575px)
 {
