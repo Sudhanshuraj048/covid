@@ -51,10 +51,10 @@
                 <ul>
                     <li class="active"><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#cases">Cases</a></li>
                     <li><a href="#symptoms">Symptoms</a></li>
                     <li><a href="#prevention">Prevention</a></li>
-                    
+                    <li><a href="#lockdown">Lockdown</a></li>
+                    <li><a href="#cases">Cases</a></li>
                 </ul>
             </nav>
             <!-- End nav menu -->
@@ -96,7 +96,7 @@
                  
                 
                     <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-2" data-aos="fade-left" data-aos-delay="150">
-                        <h4>What is COVID-19?</h4>
+                        <h4><span class="ui"><img src="images/ui.svg" height="25" width="25"></span>What is COVID-19?</h4>
                         <p>
                             COVID-19 is the new respiratory disease spreading around the world and it is caused by a coronavirus. COVID-19 is short for “coronavirus disease 2019.”
                         </p>
@@ -110,63 +110,206 @@
             </div>
         </section>
         <!-- End About section -->
-        <!-- ======= Cases ======= -->
-        <section id="cases" class="cases">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2>Cases</h2>
-            </div>
-            <div class="row" id="alltotal">
-                <div class="conf col-lg-3 col-md-3 col-3"  data-aos="fade-left" data-aos-delay="150" style="color: #ff073a;">
-                    <h7>Confirmed</h7>
-                    <h5 id="confirmed"></h5>
-                    <h6 id="iconfirmed"><small><i class="fas fa-arrow-up"></i></small> </h6>
+       
+       <!-- ======= Symptoms Section ======= -->
+        <section id="symptoms" class="symptoms">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up" data-aos-delay="150">
+                    <h2>Symptoms</h2>
                 </div>
-                <div class="act col-lg-3 col-md-3 col-3"  data-aos="fade-left" data-aos-delay="150" style="color:#0080ff">
-                    <h7>Active</h7>
-                    <h5 id="active"></h5>
-                </div>
-                <div class="rec col-lg-3 col-md-3 col-3"  data-aos="fade-right" data-aos-delay="150" style="color: #009970;">
-                    <h7>Recovered</h7>
-                    <h5 id="recovered"></h5>
-                    <h6 id="irecovered"><small><i class="fas fa-arrow-up"></i></small> </h6>
-                </div>
-                <div class="det col-lg-3 col-md-3 col-3"  data-aos="fade-right" data-aos-delay="150" style="color: #4d4d4d;">
-                    <h7>Deaths</h7>
-                    <h5 id="deaths"></h5>
-                    <h6 id="ideaths"><small><i class="fas fa-arrow-up"></i></small> </h6>
-                </div>
-            </div>
-        </div>
+                <div class="row">
 
-         <section>       
-        <div class="container">
-            <div class="row" id="alltable">
-            <table class="table col-lg-12 col-md-12 col-12"  data-aos="fade-right" data-aos-delay="150">
-              <input id="search-input" class="form-control" type="text" placeholder="Search State/UT">
-                <thead class="thead">
-                  
-                  <tr>
-                    <th scope="col">State/UT</th>
-                    <th scope="col">Confirmed</th>
-                    <th scope="col">Active</th>
-                    <th scope="col">Recovered</th>
-                    <th scope="col">Deaths</th>
-                    <!-- just for sorting the tble -->
-                    <th scope="col" id="c">conf</th>
-                  </tr>
-                </thead>
-                <tbody class="tbody" id="mytable">
-                  
-                </tbody>
-              </table>
+                    <div class="col-xl-6 d-flex order-2 order-lg-1 align-items-stretch pt-4 pt-xl-0" data-aos="fade-left" data-aos-delay="150">
+                        <div class="d-flex flex-column justify-content-center">
+                            <div class="row">
+                                <h4><span class="ui"><img src="images/ui.svg" height="25" width="25"></span>What are COVID-19’s symptoms?</h4>
+                               <div class="row content d-flex justify-content-center">
+                                   <div class="col-lg-6 col-md-6 col-6">
+                                   <div class="sym-box" data-aos="fade-right" data-aos-delay="300">
+                                    <img src="images/bacteria.svg" alt="" class="img-fluid">
+                                    <p>Cough</p>
+                                   </div>
+                                   </div>
+                                   <div class="col-lg-6 col-md-6 col-6">
+                                   <div class="sym-box" data-aos="fade-left" data-aos-delay="300">
+                                    <img src="images/cold.svg" alt="" class="img-fluid"> 
+                                    <p>Fever</p>
+                                   </div>
+                                   </div>
+                               </div>
+                               <div class="row content d-flex justify-content-center">
+                                <div class="col-lg-6 col-md-6 col-6">   
+                                   <div class="sym-box" data-aos="fade-right" data-aos-delay="150">
+                                    <img src="images/human.svg" alt="" class="img-fluid"> 
+                                    <p>Difficulty breathing</p>
+                                   </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-6">  
+                                   <div class="sym-box" data-aos="fade-left" data-aos-delay="150">
+                                    <img src="images/icons8-person-tired-96.png" alt="" class="img-fluid"> 
+                                    <p>Tiredness</p>
+                                   </div>
+                                 </div>  
+                               </div> 
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="image col-xl-6 d-flex order-1 order-lg-2 align-items-stretch justify-content-center justify-content-xl-start" data-aos="fade-right" data-aos-delay="300">
+                        <img src="images/undraw_mobile_browsers_lib5.svg" alt="" class="img-fluid">
+                    </div>
+
+                </div>
+            </div>
+        </section>  
+        <!-- End symptoms -->
+
+        <!-- ======= Prevention section======= -->
+        <section id="prevention" class="prevention">
+          <div class="container">
+              <div class="section-title" data-aos="fade-up">
+                  <h2>Prevention</h2>
               </div>
-        </div>
-        
-        </section>
-        </section>
-        
 
+              <div class="row">
+                  <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="150">
+                      <div class="icon-box">
+                          <div class="icon">
+                            <img src="images/hands-and-gestures.svg" alt="" class="img-fluid">
+                          </div>
+                          <h5 class="title">Wash Hands</h5>
+                      </div>
+                  </div> 
+                  <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="150">
+                    <div class="icon-box">
+                        <div class="icon">
+                          <img src="images/health-care.svg" alt="" class="img-fluid">
+                        </div>
+                        <h5 class="title">Wear Mask</h5>
+                    </div>
+                </div> 
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="150">
+                    <div class="icon-box">
+                        <div class="icon">
+                          <img src="images/laptop.svg" alt="" class="img-fluid">
+                        </div>
+                        <h5 class="title">Stay Home</h5>
+                    </div>
+                </div> 
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="150">
+                    <div class="icon-box">
+                        <div class="icon">
+                          <img src="images/keep-distance.svg" alt="" class="img-fluid">
+                        </div>
+                        <h5 class="title">Keep Distance</h5>
+                    </div>
+                </div> 
+              </div>
+          </div>  
+        </section>
+        <!-- End prevention section -->
+        <!-- ======= Lockdown section======= -->
+        <section id="lockdown" class="lockdown">
+          <div class="container">
+              <div class="section-title" data-aos="fade-up">
+                  <h2>Lockdown</h2>
+              </div>
+
+              <div class="row">
+                  <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-5 mb-lg-5" data-aos="zoom-in" data-aos-delay="150">
+                      
+                            <img src="images/undraw_netflix_q00o.svg" alt="" class="img-fluid">
+                       
+                  </div> 
+                  <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-5 mb-lg-5" data-aos="zoom-in" data-aos-delay="150">
+                    
+                          <img src="images/undraw_operating_system_4lr6 (1).svg" alt="" class="img-fluid">
+                      
+                </div> 
+                <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-5 mb-lg-5" data-aos="zoom-in" data-aos-delay="150">
+                    
+                          <img src="images/undraw_programming_2svr.svg" alt="" class="img-fluid">
+                       
+                </div> 
+                <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-5 mb-lg-5" data-aos="zoom-in" data-aos-delay="150">
+                    
+                          <img src="images/undraw_breakfast_psiw.svg" alt="" class="img-fluid">
+                       
+                </div> 
+                <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-5 mb-lg-5" data-aos="zoom-in" data-aos-delay="150">
+                    
+                          <img src="images/wseo-bg-1 (1).png" alt="" class="img-fluid">
+                       
+                </div> 
+                <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-5 mb-lg-5" data-aos="zoom-in" data-aos-delay="150">
+                    
+                          <img src="images/undraw_responsive_6c8s.svg" alt="" class="img-fluid">
+                       
+                </div> 
+                
+              </div>
+          </div>  
+        </section>
+        <!-- End lockdown section -->
+
+         <!-- ======= Cases section======= -->
+         <section id="cases" class="cases">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Cases</h2>
+                </div>
+                <div class="row" id="alltotal">
+                    <div class="conf col-lg-3 col-md-3 col-3"  data-aos="fade-left" data-aos-delay="150" style="color: #ff073a;">
+                        <h7>Confirmed</h7>
+                        <h5 id="confirmed"></h5>
+                        <h6 id="iconfirmed"><small><i class="fas fa-arrow-up"></i></small> </h6>
+                    </div>
+                    <div class="act col-lg-3 col-md-3 col-3"  data-aos="fade-left" data-aos-delay="150" style="color:#0080ff">
+                        <h7>Active</h7>
+                        <h5 id="active"></h5>
+                    </div>
+                    <div class="rec col-lg-3 col-md-3 col-3"  data-aos="fade-right" data-aos-delay="150" style="color: #009970;">
+                        <h7>Recovered</h7>
+                        <h5 id="recovered"></h5>
+                        <h6 id="irecovered"><small><i class="fas fa-arrow-up"></i></small> </h6>
+                    </div>
+                    <div class="det col-lg-3 col-md-3 col-3"  data-aos="fade-right" data-aos-delay="150" style="color: #4d4d4d;">
+                        <h7>Deaths</h7>
+                        <h5 id="deaths"></h5>
+                        <h6 id="ideaths"><small><i class="fas fa-arrow-up"></i></small> </h6>
+                    </div>
+                </div>
+            </div>
+    
+             <section>       
+            <div class="container">
+                <div class="row" id="alltable">
+                <table class="table col-lg-12 col-md-12 col-12"  data-aos="fade-right" data-aos-delay="10">
+                  <input id="search-input" class="form-control" type="text" placeholder="Search State/UT">
+                    <thead class="thead">
+                      
+                      <tr>
+                        <th scope="col">State/UT</th>
+                        <th scope="col">Confirmed</th>
+                        <th scope="col">Active</th>
+                        <th scope="col">Recovered</th>
+                        <th scope="col">Deaths</th>
+                        <!-- just for sorting the tble -->
+                        <th scope="col" id="c">conf</th>
+                      </tr>
+                    </thead>
+                    <tbody class="tbody" id="mytable">
+                      
+                    </tbody>
+                  </table>
+                  </div>
+            </div>
+            
+            </section>
+            </section>
+            <!-- End cases -->
+    
+        
     </main>
 
      <!-- Vendor JS Files -->
