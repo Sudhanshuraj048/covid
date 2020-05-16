@@ -1,4 +1,4 @@
-# CORONA TRACKER INDIA
+# COVID TRACKER INDIA
 
 Track of all Covid-19 cases in INDIA
 
