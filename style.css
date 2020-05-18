@@ -442,7 +442,7 @@ section{
 {
     .table, .delrec, .deldeath, .delconf{
         font-size: 10px;
-        min-width: 375px;
+        min-width: 370px;
         
     }
     #search-input{
