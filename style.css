@@ -385,7 +385,7 @@ section{
     border-radius: 8px 8px 4px 4px;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    /* isolation: isolate; */
+    
 }
 .thead{
     color: #fff;
@@ -409,7 +409,7 @@ section{
     font-size: .9rem;
     min-width: 700px;
     overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 8px 8px 15px #009970;
   }
 .delrec
 {
