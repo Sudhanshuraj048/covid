@@ -27,7 +27,7 @@ $(document).ready(function() {
         increased_deaths= data.statewise[0].deltadeaths;
         increased_active=increased_confirmed-increased_recovered-increased_deaths;
         if(increased_active<0)
-        increased_active=0;
+        increased_active="0";
         
         // Intl.NumberFormat().format(total_confirmed)-for converting 1255 to 1,255
 
@@ -37,11 +37,37 @@ $(document).ready(function() {
         $("#recovered").append(Intl.NumberFormat().format(total_recovered));
         $("#deaths").append(Intl.NumberFormat().format(total_deaths));
 
+        if(increased_active!="0"){
+        $("#iactive").append(Intl.NumberFormat().format(increased_active));}
+        else{
+            var img = document.createElement("img");
+            img.src = "images/heart-act.svg";
+            var src = document.getElementById("iactive");
+            src.appendChild(img);}
 
-        $("#iactive").append(Intl.NumberFormat().format(increased_active));
-        $("#iconfirmed").append(Intl.NumberFormat().format(increased_confirmed));
-        $("#irecovered").append(Intl.NumberFormat().format(increased_recovered));
-        $("#ideaths").append(Intl.NumberFormat().format(increased_deaths));
+        if(increased_confirmed!="0"){
+        $("#iconfirmed").append(Intl.NumberFormat().format(increased_confirmed));}
+        else{
+            var img = document.createElement("img");
+            img.src = "images/heart-conf.svg";
+            var src = document.getElementById("iconfirmed");
+            src.appendChild(img);}
+
+        if(increased_recovered!="0"){
+        $("#irecovered").append(Intl.NumberFormat().format(increased_recovered));}
+        else{
+            var img = document.createElement("img");
+            img.src = "images/heart-rec.svg";
+            var src = document.getElementById("irecovered");
+            src.appendChild(img);}
+
+        if(increased_deaths!="0"){
+        $("#ideaths").append(Intl.NumberFormat().format(increased_deaths));}
+        else{
+        var img = document.createElement("img");
+        img.src = "images/heart-deaths.svg";
+        var src = document.getElementById("ideaths");
+        src.appendChild(img);}
 
         // The each loop select a single statewise array element
         // Take the data in that array and add it to variables
