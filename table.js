@@ -17,6 +17,7 @@ $(document).ready(function() {
         total_deaths= data.statewise[0].deaths;
 
         //increased cases
+        var increased_active;
         var increased_confirmed;
         var increased_recovered;
         var increased_deaths;
@@ -24,15 +25,18 @@ $(document).ready(function() {
         increased_confirmed= data.statewise[0].deltaconfirmed;
         increased_recovered= data.statewise[0].deltarecovered;
         increased_deaths= data.statewise[0].deltadeaths;
+        increased_active=increased_confirmed-increased_recovered-increased_deaths;
         
         // Intl.NumberFormat().format(total_confirmed)-for converting 1255 to 1,255
 
+        
         $("#confirmed").append(Intl.NumberFormat().format(total_confirmed));
         $("#active").append(Intl.NumberFormat().format(total_active));
         $("#recovered").append(Intl.NumberFormat().format(total_recovered));
         $("#deaths").append(Intl.NumberFormat().format(total_deaths));
 
 
+        $("#iactive").append(Intl.NumberFormat().format(increased_active));
         $("#iconfirmed").append(Intl.NumberFormat().format(increased_confirmed));
         $("#irecovered").append(Intl.NumberFormat().format(increased_recovered));
         $("#ideaths").append(Intl.NumberFormat().format(increased_deaths));
@@ -96,7 +100,12 @@ $(document).ready(function() {
                                 ${Intl.NumberFormat().format(value[i].confirmed)}
                                 </td>
                                 
-                                <td>${Intl.NumberFormat().format(value[i].active)}</td>
+                                <td>
+                                <span class="delact" style="color: #0080ff;">
+                                <small><i class="fas fa-arrow-up"></i></small>
+                                ${Intl.NumberFormat().format(value[i].deltaconfirmed-value[i].deltarecovered-value[i].deltadeaths)}
+                                </span>
+                                ${Intl.NumberFormat().format(value[i].active)}</td>
                                 <td>
                                 <span class="delrec" style="color: #009970;">
                                 <small><i class="fas fa-arrow-up"></i></small>
