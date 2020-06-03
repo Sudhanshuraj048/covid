@@ -26,6 +26,8 @@ $(document).ready(function() {
         increased_recovered= data.statewise[0].deltarecovered;
         increased_deaths= data.statewise[0].deltadeaths;
         increased_active=increased_confirmed-increased_recovered-increased_deaths;
+        if(increased_active<0)
+        increased_active=0;
         
         // Intl.NumberFormat().format(total_confirmed)-for converting 1255 to 1,255
 
@@ -89,6 +91,9 @@ $(document).ready(function() {
             table.innerHTML ='' //for searching
             for(var i=0; i < value.length; i++)
             {
+                var deltaact=Intl.NumberFormat().format(value[i].deltaconfirmed-value[i].deltarecovered-value[i].deltadeaths);
+                if(deltaact<0)
+                deltaact=0;
                 var row = `<tr>
                                 <td>${value[i].state}</td>
                                 <td>
@@ -103,7 +108,7 @@ $(document).ready(function() {
                                 <td>
                                 <span class="delact" style="color: #0080ff;">
                                 <small><i class="fas fa-arrow-up"></i></small>
-                                ${Intl.NumberFormat().format(value[i].deltaconfirmed-value[i].deltarecovered-value[i].deltadeaths)}
+                                ${deltaact}
                                 </span>
                                 ${Intl.NumberFormat().format(value[i].active)}</td>
                                 <td>
