@@ -416,6 +416,11 @@ section{
     font-size: 12px;
     padding-right: 2px;
 }
+.delact
+{
+    font-size: 12px;
+    padding-right: 2px;
+}
 .deldeath
 {
     font-size: 12px;
@@ -428,7 +433,7 @@ section{
 }
 @media(max-width:768px)
 {
-    .table, .delrec, .deldeath, .delconf{
+    .table, .delrec, .deldeath, .delconf, .delact{
         font-size: 10px;
         min-width: 575px;
         
@@ -440,7 +445,7 @@ section{
 }
 @media(max-width:575px)
 {
-    .table, .delrec, .deldeath, .delconf{
+    .table, .delrec, .deldeath, .delconf, .delact{
         font-size: 10px;
         min-width: 370px;
         
