@@ -24,44 +24,35 @@
     <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
     
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
-    <!-- Font Awesome -->
-    <script
-      src="https://kit.fontawesome.com/996973c893.js"
-      crossorigin="anonymous"
-    ></script>
-
+   
     <!-- custom css file -->
     <link rel="stylesheet" href="style.css">
     
 </head>
 <body>
    <!-- ======= Header ======= -->
-    <header id="header" class="fixed-top d-flex align-items-center">
-        <div class="container d-flex align-items-center">
-            
-            <div class="logo  back-to-top mr-auto">
-                <a href="#header"><h1 class="covid">C<span class="corona"><img src="images/favicon.png"></span>VID-19</h1></a>
-            </div>
-
-            <nav class="nav-menu d-none d-lg-block">
-                <ul>
-                    <li class="active"><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#symptoms">Symptoms</a></li>
-                    <li><a href="#prevention">Prevention</a></li>
-                    <li><a href="#lockdown">Lockdown</a></li>
-                    <li><a href="#cases">Cases</a></li>
-                    <li><a href="#footer">Footer</a></li>
-                </ul>
-            </nav>
-            <!-- End nav menu -->
+   <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+        
+        <div class="logo  back-to-top mr-auto">
+            <a href="#header"><h1 class="covid">C<span class="corona"><img src="images/favicon.png"></span>VID-19</h1></a>
         </div>
-    </header>
-    <!-- Header End -->
+
+        <nav class="nav-menu d-none d-lg-block">
+            <ul>
+                <li class="active"><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#symptoms">Symptoms</a></li>
+                <li><a href="#prevention">Prevention</a></li>
+                <li><a href="#lockdown">Lockdown</a></li>
+                <li><a href="#cases">Cases</a></li>
+                <li><a href="#footer">Footer</a></li>
+            </ul>
+        </nav>
+        <!-- End nav menu -->
+    </div>
+</header>
+<!-- Header End -->
     
     <!-- ======= Intro Section ======= -->
     <section id="intro" class="d-flex align-items-center">
@@ -270,6 +261,7 @@
                     <div class="act col-lg-3 col-md-3 col-3"  data-aos="fade-left" data-aos-delay="150" style="color:#0080ff">
                         <h7>Active</h7>
                         <h5 id="active"></h5>
+                        <h6 id="iactive"><small><i class="fas fa-arrow-up"></i></small> </h6>
                     </div>
                     <div class="rec col-lg-3 col-md-3 col-3"  data-aos="fade-right" data-aos-delay="150" style="color: #009970;">
                         <h7>Recovered</h7>
@@ -289,7 +281,7 @@
                 <div class="row" id="alltable">
                 <table class="table col-lg-12 col-md-12 col-12"  data-aos="fade-right" data-aos-delay="10">
                   <input id="search-input" class="form-control" type="text" placeholder="Search State/UT">
-                    <thead class="thead">
+                    <thead class="thead ">
                       
                       <tr>
                         <th scope="col">State/UT</th>
@@ -311,6 +303,7 @@
             </section>
             </section>
             <!-- End cases -->
+            
      <!-- ======= Footer section======= -->
      <section id="footer" class="footer">
         <div class="container">
@@ -409,6 +402,16 @@
      <script src="assets/vendor/venobox/venobox.min.js"></script>
      <script src="assets/vendor/aos/aos.js"></script>
  
+      <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/996973c893.js"
+      crossorigin="anonymous"
+    ></script>
+
     <!---custom main js file-->
     <script src="main.js"></script>
     <script src="table.js"></script>
