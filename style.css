@@ -393,7 +393,7 @@ section{
     background: linear-gradient(40deg, #45cafc, #303f9f);
 }
 .tbody tr:nth-child(even) {
-    background-color: #eaf8e6;
+    background-color: rgba(69,202,252,0.12);
   }
 .tbody .tr {
     border-bottom: 1px solid #dddddd;
