@@ -388,9 +388,9 @@ section{
     
 }
 .thead{
-    color: #fff;
+    color: black;
     line-height: 1.4;
-    background-color: #009970;
+    background: linear-gradient(40deg, #45cafc, #303f9f);
 }
 .tbody tr:nth-child(even) {
     background-color: #eaf8e6;
@@ -400,16 +400,18 @@ section{
   } 
  
   .tbody tr:last-of-type{
-    border-bottom: 2px solid #009970;
+    border-bottom: 2px solid #45cafc;
   }   
   #search-input{
-    border: .4px  #009970;
+    border: .4px  #45cafc;
+    color: black;
+    
     border-collapse: collapse;
     margin: 25px 0;
     font-size: .9rem;
     min-width: 700px;
     overflow: hidden;
-    box-shadow: 8px 8px 15px #009970;
+    box-shadow: 8px 8px 15px #45cafc;
   }
 .delrec
 {
@@ -632,3 +634,10 @@ section{
         width: 100%;
     }
 }
+/* .table.thead th{
+    position: sticky !important;
+    
+    top: 20px;
+    color:black;
+    background-color: #009970;
+} */
