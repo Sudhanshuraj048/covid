@@ -321,7 +321,7 @@ $(document).ready(function() {
                      position: 'right',
                      
                      ticks: {
-                         stepSize: 50000,
+                         stepSize: 5000,
                          fontColor: "rgb(108, 117, 125)",
                      },
                      gridLines: {
