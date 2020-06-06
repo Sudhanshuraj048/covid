@@ -163,6 +163,177 @@ $(document).ready(function() {
                             $('table tr').find('td:eq(5),th:eq(5)').remove();
                                         
         }
+
+     // for charts
+     var date=[];
+     var chartconfirmed=[];
+     var chartrecovered=[];
+     var chartdeaths=[];
+
+     var n=data.cases_time_series.length;
+     for(var k= n-30; k<n-1 ;k+=7)
+     {
+         date.push(data.cases_time_series[k].date);
+         chartconfirmed.push(data.cases_time_series[k].totalconfirmed);
+         chartrecovered.push(data.cases_time_series[k].totalrecovered);
+         chartdeaths.push(data.cases_time_series[k].totaldeceased);
+         
+     }
+     date.push(data.cases_time_series[n-1].date);
+         chartconfirmed.push(data.cases_time_series[n-1].totalconfirmed);
+         chartrecovered.push(data.cases_time_series[n-1].totalrecovered);
+         chartdeaths.push(data.cases_time_series[n-1].totaldeceased);
+     
+     var mychart= document.getElementById("myChart").getContext('2d');
+     var chart=new Chart(mychart,{
+         type:'line',
+        
+         data: {
+             labels: date,
+             
+             datasets:[{
+                 label: "confirmed",
+                 data: chartconfirmed,
+                 fill: false,
+                 backgroundColor:"rgba(255, 7, 58, 0.8)",
+                 borderColor:"rgba(255, 7, 58, 0.314)",
+             }],
+         },
+         
+         options: {
+             legend: {
+                 display:false,
+             } ,
+             scales: {
+                 xAxes: [{
+                   
+                                         
+                     ticks: {
+                         
+                         fontColor: "rgba(255, 7, 58, 0.8)",
+                     },
+                     gridLines: {
+                    
+                        drawOnChartArea:false,
+                        
+                        color:"rgba(255, 7, 58, 0.8)",
+                         
+                       }
+                    }],
+                 yAxes: [{
+                     position: 'right',
+                     
+                     ticks: {
+                         stepSize: 50000,
+                         fontColor: "rgba(255, 7, 58, 0.8)",
+                     },
+                     gridLines: {
+                        drawOnChartArea:false,
+                        color:"rgba(255, 7, 58, 0.8)",
+                         
+                       }
+                    }]
+             },
+         }
+     });
+     var mychart1= document.getElementById("myChart1").getContext('2d');
+     var chart=new Chart(mychart1,{
+         type:'line',
+        
+         data: {
+             labels: date,
+             
+             datasets:[{
+                 label: "Recovered",
+                 data: chartrecovered,
+                 fill: false,
+                 backgroundColor:"rgba(40, 167, 69,0.8)",
+                 borderColor:"rgba(40, 167, 69,0.314)",
+             }],
+         },
+         
+         options: {
+             legend: {
+                 display:false,
+             } ,
+             scales: {
+                 xAxes: [{
+                   
+                                         
+                     ticks: {
+                         
+                         fontColor: "rgba(40, 167, 69,0.8)",
+                     },
+                     gridLines: {
+                        drawOnChartArea:false,
+                        color:"rgba(40, 167, 69, 0.8)",
+                       }
+                    }],
+                 yAxes: [{
+                     position: 'right',
+                     
+                     ticks: {
+                         stepSize: 50000,
+                         fontColor: "rgba(40, 167, 69,0.8)",
+                     },
+                     gridLines: {
+                        drawOnChartArea:false,
+                        color:"rgba(40, 167, 69, 0.8)",
+                       }
+                    }]
+             },
+         }
+     });
+     var mychart2= document.getElementById("myChart2").getContext('2d');
+     var chart=new Chart(mychart2,{
+         type:'line',
+        
+         data: {
+             labels: date,
+             
+             datasets:[{
+                 label: "Deaths",
+                 data: chartdeaths,
+                 fill: false,
+                 backgroundColor:"rgb(108, 117, 125)",
+                 borderColor:"rgba(108, 117, 125,0.314)",
+             }],
+         },
+         
+         options: {
+             legend: {
+                 display:false,
+             } ,
+             scales: {
+                 xAxes: [{
+                   
+                                         
+                     ticks: {
+                         
+                         fontColor: "rgb(108, 117, 125)",
+                     },
+                     gridLines: {
+                        drawOnChartArea:false,
+                        color:"rgba(108,117,125,0.8)",
+                       }
+                    }],
+                 yAxes: [{
+                     position: 'right',
+                     
+                     ticks: {
+                         stepSize: 50000,
+                         fontColor: "rgb(108, 117, 125)",
+                     },
+                     gridLines: {
+                        drawOnChartArea:false,
+                        color:"rgba(108,117,125, 0.8)",
+                       }
+                    }]
+             },
+         }
+     });
+
+
         /**
  * Sorts a HTML table.
  * 
