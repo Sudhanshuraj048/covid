@@ -184,6 +184,7 @@ $(document).ready(function() {
          chartrecovered.push(data.cases_time_series[n-1].totalrecovered);
          chartdeaths.push(data.cases_time_series[n-1].totaldeceased);
      
+       
      var mychart= document.getElementById("myChart").getContext('2d');
      var chart=new Chart(mychart,{
          type:'line',
@@ -204,6 +205,12 @@ $(document).ready(function() {
              legend: {
                  display:false,
              } ,
+             tooltips: { 
+                
+                callbacks: { 
+                    label: function(tooltipItem, data) { 
+                        return tooltipItem.yLabel.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); }, }, 
+             }, 
              scales: {
                  xAxes: [{
                    
@@ -226,6 +233,9 @@ $(document).ready(function() {
                      ticks: {
                          stepSize: 50000,
                          fontColor: "rgba(255, 7, 58, 0.8)",
+                         userCallback: function(value, index, values) {
+                            return value.toLocaleString();   // this is all we need for comma separated numbers
+                        }
                      },
                      gridLines: {
                         drawOnChartArea:false,
@@ -256,6 +266,12 @@ $(document).ready(function() {
              legend: {
                  display:false,
              } ,
+             tooltips: { 
+                
+                callbacks: { 
+                    label: function(tooltipItem, data) { 
+                        return tooltipItem.yLabel.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); }, }, 
+             }, 
              scales: {
                  xAxes: [{
                    
@@ -275,6 +291,9 @@ $(document).ready(function() {
                      ticks: {
                          stepSize: 50000,
                          fontColor: "rgba(40, 167, 69,0.8)",
+                         userCallback: function(value, index, values) {
+                            return value.toLocaleString();   // this is all we need for comma separated numbers
+                        }
                      },
                      gridLines: {
                         drawOnChartArea:false,
@@ -304,6 +323,12 @@ $(document).ready(function() {
              legend: {
                  display:false,
              } ,
+             tooltips: { 
+                
+                callbacks: { 
+                    label: function(tooltipItem, data) { 
+                        return tooltipItem.yLabel.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); }, }, 
+             }, 
              scales: {
                  xAxes: [{
                    
@@ -323,6 +348,9 @@ $(document).ready(function() {
                      ticks: {
                          stepSize: 5000,
                          fontColor: "rgb(108, 117, 125)",
+                         userCallback: function(value, index, values) {
+                            return value.toLocaleString();   // this is all we need for comma separated numbers
+                        }
                      },
                      gridLines: {
                         drawOnChartArea:false,
