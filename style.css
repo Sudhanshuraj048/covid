@@ -412,6 +412,9 @@ section{
     min-width: 700px;
     overflow: hidden;
     box-shadow: 8px 8px 15px #45cafc;
+    background: url(images/search.svg) left no-repeat;
+    
+    padding-left:22px; 
   }
 .delrec
 {
