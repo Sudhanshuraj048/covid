@@ -28,6 +28,12 @@ $(document).ready(function() {
         increased_active=increased_confirmed-increased_recovered-increased_deaths;
         if(increased_active<0)
         increased_active="0";
+        if(increased_confirmed<0)
+        increased_confirmed="0";
+        if(increased_recovered<0)
+        increased_recovered="0";
+        if(increased_deaths<0)
+        increased_deaths="0";
         
         // Intl.NumberFormat().format(total_confirmed)-for converting 1255 to 1,255
 
@@ -120,6 +126,8 @@ $(document).ready(function() {
                 var deltaact=Intl.NumberFormat().format(value[i].deltaconfirmed-value[i].deltarecovered-value[i].deltadeaths);
                 if(deltaact<0)
                 deltaact=0;
+                if(value[i].state=="State Unassigned")
+                i++;
                 var row = `<tr>
                                 <td>${value[i].state}</td>
                                 <td>
