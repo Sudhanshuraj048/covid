@@ -125,9 +125,9 @@ $(document).ready(function() {
             table.innerHTML ='' //for searching
             for(var i=0; i < value.length; i++)
             {
-                var deltaact=Intl.NumberFormat().format(value[i].deltaconfirmed-value[i].deltarecovered-value[i].deltadeaths);
+                var deltaact=value[i].deltaconfirmed-value[i].deltarecovered-value[i].deltadeaths;
                 if(deltaact<0)
-                deltaact=0;
+                deltaact="0";
                 
                 var row = `<tr>
                                 <td>${value[i].state}</td>
@@ -143,7 +143,7 @@ $(document).ready(function() {
                                 <td>
                                 <span class="delact" style="color: #0080ff;">
                                 <small><i class="fas fa-arrow-up"></i></small>
-                                ${deltaact}
+                                ${Intl.NumberFormat().format(deltaact)}
                                 </span>
                                 ${Intl.NumberFormat().format(value[i].active)}</td>
                                 <td>
